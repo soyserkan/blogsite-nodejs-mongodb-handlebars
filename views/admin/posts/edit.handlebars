@@ -1,0 +1,40 @@
+<h1>Blog Yazısı Düzenle</h1>
+
+
+<form action="/admin/posts/edit/{{postData.id}}?_method=PUT" method="POST">
+
+    <div class="form-group">
+        <label for="title">Başlık</label>
+        <input name="title" type="text" class="form-control" id="title" placeholder="Başlık Giriniz" value="{{postData.title}}">
+    </div>
+
+    <div class="form-group">
+        <label for="title">Durum</label>
+        <select name="status" class="form-control" id="status">
+             {{#select postData.status}}  
+            <option value="public">Yayına Al</option>
+            <option value="private">Bana Özel</option>
+            <option value="draft">Taslak</option>
+             {{/select}}
+        </select>
+    </div>
+
+    
+
+    <div class="form-check">
+        <label for="allowComments" class="form-check-label">
+            <input name="allowComments" type="checkbox" class="form-check-input" id="allowComments" {{#if postData.allowComments }} checked="checked" {{/if}}>
+            Yorumlara İzin Ver
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for="body">Metin</label>
+        <textarea name="body" cols="30" rows="10" type="text" class="form-control" id="body"
+            placeholder="Blog Yazısı">{{postData.body}}</textarea>
+    </div>
+
+    <button type="submit" name="submit" class="btn btn-primary">Düzenle</button>
+
+
+</form>
