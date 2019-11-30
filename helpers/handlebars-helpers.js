@@ -1,7 +1,6 @@
+const moment = require('moment');
 module.exports = {
-
-    select: (param, options) => {
-        return options.fn(this).replace(new RegExp(' value=\"' + param + '\"'), '$&selected="selected"');
-    }
-
+    select: (param, options) => options.fn(this).replace(new RegExp(' value=\"' + param + '\"'), '$&selected="selected"'),
+    generateTime: (date, format) => moment(date).format(format),
+    limitString: (string, length) => (string.length > length) ? string.substr(0, length) + '...' : string
 }

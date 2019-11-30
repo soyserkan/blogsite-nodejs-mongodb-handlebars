@@ -4,9 +4,11 @@
 <thead>
     <tr>
         <th>ID</th>
+        <th>Fotoğraf</th>
         <th>Başlık</th>
         <th>Durum</th>
         <th>Yorumlara İzin Ver</th>
+        <th>Tarih</th>
         <th>İşlem</th>
     </tr>
 </thead>
@@ -14,10 +16,12 @@
     {{#each postsData}}
     <tr>
         <td>{{id}}</td>
+        <td><img src="/uploads/{{file}}" class="img-responsive" height="50"></td>
         <td>{{title}}</td>
         <td>{{status}}</td>
         <td>{{allowComments}}</td>
-        <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Düzenle</a><a href="/admin/posts?{{id}}" class="btn btn-danger">Sil</a></td>
+        <td>{{generateTime date 'MMMM Do YYYY'}}</td>
+        <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Düzenle</a>&nbsp;<a href="/admin/posts/delete/{{id}}" class="btn btn-danger">Sil</a></td>
     </tr>
     {{/each}}
 </tbody>

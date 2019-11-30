@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../../models/Post');
 
 
 router.all('/*', (req, res, next) => {
@@ -7,8 +8,15 @@ router.all('/*', (req, res, next) => {
     next();
 });
 
-router.get('/', (req, res) => {
-    res.render('home/index');
+router.get('/', async (req, res) => {
+
+    try {
+        const allData = await Post.find({});
+        res.render('home/index', { allData });
+    } catch (error) {
+        console.log(`Error occured: ${error}`);
+    }
+
 });
 router.get('/about-us', (req, res) => {
     res.render('home/about-us');
@@ -16,5 +24,16 @@ router.get('/about-us', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('home/login');
 });
+
+router.get('/post-detail/:id', async (req, res) => {
+    try {
+        const singleData = await Post.findOne({
+            _id: req.params.id
+        });
+        res.render('home/post-detail', { singleData });
+    } catch (error) {
+        console.log(`Error occured: ${error}`);
+    }
+})
 
 module.exports = router;

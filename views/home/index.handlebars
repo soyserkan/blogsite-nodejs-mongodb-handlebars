@@ -45,583 +45,41 @@
 						<!-- Content Left Area --> 
 						<div class="col-md-9">
 							<div class="row">
-								<!-- Blog Small Image Single Item -->
+							{{#each allData}}	
 								<div class="col-md-4">
 									<div class="blog-single-post pb-60">
 										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/1.jpg" alt="" /></a>
+											<a href="/post-detail/{{_id}}"><img src="../uploads/{{file}}" alt="" style="width: 100%; height:auto;" /></a>
 											<span class="pst-titel"><a href="#">ADVENTURE</a></span>
 										</div>
 										<div class="post-content">
 											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Adventure Makes Life More Beautiful</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Kausar</a></span>
+												<h3><a href="/post-detail/{{_id}}">{{limitString title 20}}</a></h3>
+												<span>{{generateTime date 'DD MMMM YYYY, HH:mm'}} / <a href="#">By : Kausar</a></span>
 											</div>
 											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
+												<p>{{limitString body 65}}</p>
+												<a href="/post-detail/{{_id}}">DEVAMINI GÖR <i class="icofont icofont-long-arrow-right"></i></a>
 											</div>
-											<div class="post-info pt-15">
+											<div class="post-info pt-15 text-center">
 												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
+													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Beğeni</a>
 												</span>
 												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
+													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Yorum</a>
 												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
+												
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/2.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Life</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Explore Human Life Style</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Al</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/3.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Fashion</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Latest Fashion for Beautifl Women</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Mamun</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Large Video Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/3.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">ADVENTURE</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Beautiful Weekend with Family</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Nirob</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Large Video Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/5.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Music</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Enjoy the Breath of the Open Air</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Khan</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/6.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Life</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Make Your Weekend Beautiful</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Musa</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Single Item -->
-								<!-- Blog Large Video Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/7.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Music</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Fresh Mind with Music</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Ibrahim</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Large Video Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/8.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Fashion</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">New Fashion Trend for Women</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Salauddin</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/9.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Life</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">LIfe is Impossible without Adventure</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Jibon</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Single Item -->
-								<!-- Banner Add Area Start -->
-								<div class="col-md-12 fix pb-60">
-									<div class="middle-banner bg-1">
-										<div class="banner-content text-white">
-											<div class="left-bnr-cnt">
-												<h2>YOUR BANNER ADD HERE</h2>
-											</div>
-											<div class="right-bnr-cnt">
-												<a href="#">BUY NOW <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Banner Add Area End -->
-								<!-- Blog Large Video Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/10.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Food</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Mysterious Food Menu</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Zenaul</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Large Video Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/11.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Fashion</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Memory of Awesome Journey</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Nayan</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/12.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Life</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Enjoy the Beauty of Life</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Salim</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Single Item -->
-								<!-- Blog Large Video Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/13.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Fashion</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">New Fashion in the Twon</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Rana</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Large Video Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/14.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Music</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Attending Music Fest November</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Ashim</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/11.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Travel</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">One Day in the London City</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Kumar</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Single Item -->
-								<!-- Blog Large Video Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/16.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Music</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Adventure Makes Life More Beautiful</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Modu</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Large Video Single Item -->
-								<!-- Blog Small Image Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/14.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Life</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Life Means Joy, Life Means Enjoy</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Shimul</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Image Single Item -->
-								<!-- Blog Small Single Item -->
-								<div class="col-md-4">
-									<div class="blog-single-post pb-60">
-										<div class="blog-img">
-											<a href="#"><img src="img/blog/home-3/small/13.jpg" alt="" /></a>
-											<span class="pst-titel"><a href="#">Travel</a></span>
-										</div>
-										<div class="post-content">
-											<div class="post-titel-author pt-30 pb-15">
-												<h3><a href="#">Advanture Makes Life More Beautiful</a></h3>
-												<span>20 November 2016, 10.15 am   /  <a href="#">By : Horipodo</a></span>
-											</div>
-											<div class="post-srt-content pb-20 border-bottom">
-												<p>Adventure Sed ut perspiciatis unde omnis iste natus erro tem accusantium doloremque laudantium, totam rem aperiaque ipsa quae ab illo inventore veritatis perspiciats</p>
-												<a href="#">CONTINUE READING <i class="icofont icofont-long-arrow-right"></i></a>
-											</div>
-											<div class="post-info pt-15">
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>12 Likes</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>08 Comments</a>
-												</span>
-												<span class="post-txt mr-25">
-													<a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>50 Shares</a>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- Blog Small Single Item -->
+							{{/each}}
+
 								<!-- Pager Previous Next Button -->
 								<div class="col-md-12">
 									<ul class="pager">
-										<li><a href="#"><i class="fa fa-angle-double-left"></i>PREVIOUS</a></li>
-										<li><a href="#">NEXT<i class="fa fa-angle-double-right"></i></a></li>
+										<li><a href="#"><i class="fa fa-angle-double-left"></i>ÖNCEKİ</a></li>
+										<li><a href="#">SONRAKİ<i class="fa fa-angle-double-right"></i></a></li>
 									</ul>
 								</div>
 								<!-- Pager Previous Next Button -->
@@ -634,7 +92,7 @@
 							<div class="about-me text-center border-bottom">
 								<img src="img/team/1.png" alt="" />
 								<div class="about-info pt-15">
-									<h4>Hello! I am Lira Smith</h4>
+									<h4>Merhaba! Ben Serkan</h4>
 									<p>Life Style Sed ut perspiciatis unde omnis te natus erro tem accusantium doloremquem rem aperiaque ipsa quae ab illo inve ipsa quae ab illo inve</p>
 									<div class="social-middle">
 										<ul>
@@ -679,10 +137,10 @@
 							<!-- Choose Category Area Start -->
 							<!-- Newsletter Area Start -->
 							<div class="newsletter-area border-bottom  pt-60">
-								<h4>Subscribe Newsletter</h4>
+								<h4>Bülten Aboneliği</h4>
 								<div class="newsletter-form pt-10 pb-20">
 									<form id="mc-form">
-										<input autocomplete="off" placeholder="Enter your email here" type="text">
+										<input autocomplete="off" placeholder="email adresinizi girin" type="text">
 										<button type="submit">
 											<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 										</button>
@@ -699,7 +157,7 @@
 							<!-- Newsletter Area End -->
 							<!-- Popular Post Area Start -->
 							<div class="popularpost-area border-bottom  pt-60">
-								<h4>Popular Post</h4>
+								<h4>Popüler Yazılar</h4>
 								<div class="popular-post pt-10 pb-20">
 									<!-- Single Post -->
 									<div class="popular-single pb-25">
