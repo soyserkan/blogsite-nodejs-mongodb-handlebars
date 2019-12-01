@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Register Ekranı</title>
+</head>
+
+<body>
+{{> home/form-messages}}
+    <div class="login-page bodylogin">
+        <h3>Üye Ol</h3>
+        <div class="formlogin">
+            <form class="register-form" method="POST" action="/register">
+                <input value="{{name}}" name="name" type="text" placeholder="Adı" required />
+                <input value="{{surname}}" name="surname" type="text" placeholder="Soyadı" required />
+                <input value="{{email}}" name="email" type="email" placeholder="E-Mail Adresi" required />
+                <input name="password" type="password" placeholder="Şifre" required />
+                <input name="confirmPassword" type="password" placeholder="Şifre Tekrar" required />
+                <button type="submit">Üye Ol</button>
+                <p class="message">Zaten üye misin? <a href="/login">Giriş Yap</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
