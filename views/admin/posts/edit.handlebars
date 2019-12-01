@@ -5,28 +5,43 @@
 
     <div class="form-group">
         <label for="title">Başlık</label>
-        <input name="title" type="text" class="form-control" id="title" placeholder="Başlık Giriniz" value="{{postData.title}}">
+        <input name="title" type="text" class="form-control" id="title" placeholder="Başlık Giriniz"
+            value="{{postData.title}}">
     </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="file">Fotoğraf Yükle</label>
         <input name="file" type="file" class="form-control" id="file">
     </div>
 
     <div class="form-group">
+        <label for="category">Kategori</label>
+        <select name="category" class="form-control" id="category">
+
+            {{!-- {{#select postData.category}} --}}
+             {{#each categoryData}}
+               <option value="{{id}}">{{name}}</option>
+             {{/each}}
+            {{!-- {{/select}} --}}
+
+        </select>
+    </div>
+
+    <div class="form-group">
         <label for="title">Durum</label>
         <select name="status" class="form-control" id="status">
-             {{#select postData.status}}  
+            {{#select postData.status}}
             <option value="public">Yayına Al</option>
             <option value="private">Bana Özel</option>
             <option value="draft">Taslak</option>
-             {{/select}}
+            {{/select}}
         </select>
     </div>
 
     <div class="form-check">
         <label for="allowComments" class="form-check-label">
-            <input name="allowComments" type="checkbox" class="form-check-input" id="allowComments" {{#if postData.allowComments }} checked="checked" {{/if}}>
+            <input name="allowComments" type="checkbox" class="form-check-input" id="allowComments"
+                {{#if postData.allowComments }} checked="checked" {{/if}}>
             Yorumlara İzin Ver
         </label>
     </div>

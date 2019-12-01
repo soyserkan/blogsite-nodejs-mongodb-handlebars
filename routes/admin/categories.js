@@ -8,8 +8,36 @@ router.all('/*', (req, res, next) => {
 });
 
 
-router.get('/', (req, res) => {
-    res.render('admin/categories/index');
+router.get('/', async (req, res) => {
+    const categoriesData = await Category.find({});
+    res.render('admin/categories/index', { categoriesData });
+});
+
+router.post('/create', async (req, res) => {
+
+    const newCategory = new Category({
+        name: req.body.name
+    });
+    await newCategory.save();
+    res.redirect('/admin/categories');
+});
+
+router.get('/edit/:id', async (req, res) => {
+    const categoriesData = await Category.findOne({ _id: req.params.id });
+    res.render('/admin/categories/edit', { categoriesData });
+});
+
+router.put('/update/:id', async (req, res) => {
+    const categoriesData = await Category.findOne({ _id: req.params.id });
+    categoriesData.name = req.body.name;
+    await categoriesData.save();
+    res.redirect('/admin/categories');
+});
+
+router.get('/:id', async (req, res) => {
+    const categoriesData = await Category.findOne({ _id: req.params.id });
+    await categoriesData.remove();
+    res.redirect('/admin/categories');
 });
 
 module.exports = router;

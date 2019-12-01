@@ -19,6 +19,16 @@
         <input name="file" type="file" class="form-control" id="file">
     </div>
 
+
+    <div class="form-group">
+        <label for="category">Kategori</label>
+        <select name="category" class="form-control" id="category">
+            {{#each categoryData}}
+            <option value="{{id}}">{{name}}</option>
+           {{/each}}
+        </select>
+    </div>
+
     <div class="form-group">
         <label for="title">Durum</label>
         <select name="status" class="form-control" id="status">

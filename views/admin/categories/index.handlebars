@@ -1,1 +1,38 @@
-<h3>Kategoriler</h3>
+<div class="row">
+
+    <div class="col-sm-4">
+        <h1>Kategori Ekle</h1>
+        <form action="/admin/categories/create" method="POST">
+            <div class="form-group">
+                <label for="name">Kategori Adı</label>
+                <input type="text" name="name" placeholder="Kategori adı girin" class="form-control">
+            </div>
+            <button class="btn btn-primary">Kategori Ekle</button>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <div class="col-sm-8">
+        <h1>Kategoriler</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Kategori Adı</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each categoriesData}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td><a href="/admin/categories/edit/{{id}}" class="btn btn-info">Düzenle</a>&nbsp;<a href="/admin/categories/{{id}}" class="btn btn-danger">Sil</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

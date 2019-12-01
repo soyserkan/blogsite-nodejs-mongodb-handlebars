@@ -1,0 +1,13 @@
+<div class="row">
+
+    <div class="col-sm-4">
+        <h1>Kategori Düzenle</h1>
+        <form action="/admin/categories/update/{{categoriesData.id}}?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="name">Kategori Adı</label>
+                <input type="text" name="name" class="form-control" value="{{categoriesData.name}}">
+            </div>
+            <button class="btn btn-primary">Düzenle</button>
+        </form>
+    </div>
+</div>
