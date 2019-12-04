@@ -36,15 +36,17 @@
 	
 -----------------------------------------------------------------------------------*/
 /*----------  1. Google Fonts ----------*/
-	@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700,800|Poppins:300,400,500,600,700');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700,800|Poppins:300,400,500,600,700");
 
 /*---------- 2. Post Content Css ----------*/
-.container{width:1200px}
+.container {
+  width: 1200px;
+}
 .blog-img {
   display: block;
   position: relative;
 }
-.pst-titel a{
+.pst-titel a {
   background: #fafafa none repeat scroll 0 0;
   bottom: -12px;
   color: #a1a1a1;
@@ -60,9 +62,15 @@
   text-transform: uppercase;
   width: 120px;
 }
-.pst-titel a:hover,.blog-ph .pst-titel a:hover{color:#666;}
-.post-titel-author h3 a:hover{color:#666;}
-.post-titel-author > span,.post-txt a {
+.pst-titel a:hover,
+.blog-ph .pst-titel a:hover {
+  color: #666;
+}
+.post-titel-author h3 a:hover {
+  color: #666;
+}
+.post-titel-author > span,
+.post-txt a {
   color: #a1a1a1;
   font-family: open sans;
   font-size: 12px;
@@ -71,7 +79,14 @@
   color: #707070;
   font-weight: 700;
 }
-.post-titel-author > span a:hover,.post-srt-content > a:hover,.post-txt a:hover,.social-middle ul li a:hover,.category-list ul li a:hover,.twist-single ul li a:hover{color:#383838;}
+.post-titel-author > span a:hover,
+.post-srt-content > a:hover,
+.post-txt a:hover,
+.social-middle ul li a:hover,
+.category-list ul li a:hover,
+.twist-single ul li a:hover {
+  color: #383838;
+}
 .post-srt-content > a {
   color: #a1a1a1;
   font-size: 12px;
@@ -81,9 +96,9 @@
 .post-srt-content > a i {
   margin-left: 6px;
 }
-.post-txt a{
-  font-family:"Poppins",sans-serif;
-  transition:.3s;
+.post-txt a {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
 }
 .post-txt a i {
   margin-right: 6px;
@@ -140,9 +155,15 @@
 .mailchimp-alerts {
   padding: 10px 0;
 }
-.mailchimp-submitting{color:#31708f}
-.mailchimp-success{color:#3c763d;}
-.mailchimp-error{color:#a94442;}
+.mailchimp-submitting {
+  color: #31708f;
+}
+.mailchimp-success {
+  color: #3c763d;
+}
+.mailchimp-error {
+  color: #a94442;
+}
 /*---------- 5. Popular Post ----------*/
 .popular-single {
   display: block;
@@ -207,7 +228,9 @@
   width: 100%;
 }
 /*---------- 7. Banner Add Area ----------*/
-.add-img a img,.middle-banner img,.blog-img img {
+.add-img a img,
+.middle-banner img,
+.blog-img img {
   width: 100%;
 }
 .add-img > a {
@@ -230,7 +253,7 @@
   top: 25px;
   transition: all 0.4s ease 0s;
   width: 85%;
-  transform:rotate(-46deg)
+  transform: rotate(-46deg);
 }
 .add-text > p {
   color: #fff;
@@ -245,7 +268,10 @@
   right: 0;
   top: 35%;
 }
-.add-img:hover .add-text{opacity:1;transform:rotate(0deg)}
+.add-img:hover .add-text {
+  opacity: 1;
+  transform: rotate(0deg);
+}
 /*---------- 8. Latest Twites Post ----------*/
 .twist-single ul li a {
   color: #a1a1a1;
@@ -283,7 +309,10 @@
   margin: 0 7px 10px 0;
   padding: 5px 10px;
 }
-.tag-area ul li a:hover{background:#ebebeb;border-color:#ebebeb;}
+.tag-area ul li a:hover {
+  background: #ebebeb;
+  border-color: #ebebeb;
+}
 /*---------- 10. Pager Pagination ----------*/
 .pager {
   margin: 0;
@@ -301,11 +330,14 @@
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
 }
-.pager li > a:hover{background:transparent;color:#383838;}
+.pager li > a:hover {
+  background: transparent;
+  color: #383838;
+}
 .pager li:first-child > a {
   float: left;
 }
-.pager li:last-child a{
+.pager li:last-child a {
   float: right;
 }
 .pager li:first-child a i {
@@ -314,7 +346,7 @@
 .pager li:last-child a i {
   padding-left: 10px;
 }
-.footer-gallery{
+.footer-gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -331,7 +363,10 @@
   font-size: 13px;
   margin: 0;
 }
-.footer-bottom-right > p a{color:#686868;transition:.3s;}
+.footer-bottom-right > p a {
+  color: #686868;
+  transition: 0.3s;
+}
 .footer-menu ul li a {
   color: #999;
   font-size: 12px;
@@ -340,8 +375,11 @@
   padding: 25px 15px;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
-} 
-.footer-bottom-right > p a:hover,.footer-menu ul li a:hover{color:#fff;}
+}
+.footer-bottom-right > p a:hover,
+.footer-menu ul li a:hover {
+  color: #fff;
+}
 /*---------- 12. Middle Banner Home Three ----------*/
 .middle-banner {
   display: block;
@@ -419,14 +457,16 @@
   text-align: center;
   width: 285px;
 }
-.about-content blockquote,.post-srt-content blockquote{
+.about-content blockquote,
+.post-srt-content blockquote {
   background: #f1f1f1 none repeat scroll 0 0;
   border-left: 5px solid #d4d4d4;
   font-size: 16px;
   margin: 35px 0;
   padding: 38px 30px;
 }
-.about-content blockquote p,.post-srt-content blockquote p {
+.about-content blockquote p,
+.post-srt-content blockquote p {
   color: #606060;
   font-size: 16px;
   font-style: italic;
@@ -476,13 +516,14 @@
 
 .fres-single {
   width: 25%;
-  float:left;
+  float: left;
 }
 .list-style {
   float: left;
   width: 50%;
 }
-.list-style > ul, ol {
+.list-style > ul,
+ol {
   margin: 0;
   padding-left: 15px;
 }
@@ -498,10 +539,14 @@
   margin: 0;
 }
 /*---------- 16. Standard Post Page ----------*/
-.page-content-area .owl-theme .owl-dots .owl-dot span,.main-slide-area-two .owl-theme .owl-dots .owl-dot span {
+.page-content-area .owl-theme .owl-dots .owl-dot span,
+.main-slide-area-two .owl-theme .owl-dots .owl-dot span {
   background: #ebebeb none repeat scroll 0 0;
 }
-.page-content-area .owl-theme .owl-dots .owl-dot.active span, .page-content-area .owl-theme .owl-dots .owl-dot:hover span,.main-slide-area-two .owl-theme .owl-dots .owl-dot.active span, .main-slide-area-two .owl-theme .owl-dots .owl-dot:hover span {
+.page-content-area .owl-theme .owl-dots .owl-dot.active span,
+.page-content-area .owl-theme .owl-dots .owl-dot:hover span,
+.main-slide-area-two .owl-theme .owl-dots .owl-dot.active span,
+.main-slide-area-two .owl-theme .owl-dots .owl-dot:hover span {
   background: #d1d1d1 none repeat scroll 0 0;
   height: 12px;
   width: 12px;
@@ -573,7 +618,10 @@ p.error {
   text-align: center;
   width: 30px;
 }
-.slide-post .owl-theme .owl-nav [class*="owl-"]:hover{background:#000;color:#fff;}
+.slide-post .owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #000;
+  color: #fff;
+}
 .slide-post .owl-prev {
   left: 20px;
   position: absolute;
@@ -617,10 +665,10 @@ p.error {
   position: absolute;
   top: 0;
   width: 100%;
-  overflow:hidden;
+  overflow: hidden;
   transition: all 0.3s ease-in-out 0.2s;
-  opacity:0;
-  display:block;
+  opacity: 0;
+  display: block;
 }
 .gallery-post-single:hover .gp-hover {
   opacity: 1;
@@ -638,7 +686,7 @@ p.error {
   transform: translateY(250px);
   transition: all 0.3s ease 0s;
 }
-.gallery-post-single:hover .gp-hover h4{
+.gallery-post-single:hover .gp-hover h4 {
   transform: translateY(200px);
   transition-delay: 0.2s;
 }
@@ -657,7 +705,9 @@ p.error {
   transition: all 0.3s ease 0s;
   width: 50px;
 }
-.gallery-post-single:hover .gp-hover a{transform:scale(1);}
+.gallery-post-single:hover .gp-hover a {
+  transform: scale(1);
+}
 /*---------- 19. Contact Us Page ----------*/
 .contact-single {
   display: block;
@@ -731,4 +781,99 @@ p.error {
   width: 40px;
   z-index: 200;
 }
-#scrollUp:hover{background:#212121;}
+#scrollUp:hover {
+  background: #212121;
+}
+
+.comment-section {
+  border-top: solid 1px #e7eaeb;
+}
+.comment-section .comment-list .sec-title h3 {
+  font-size: 2.125rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3c3c3c;
+  font-weight: 600;
+}
+.comment-section .comment {
+  margin-bottom: 35px;
+  padding: 30px;
+  border: solid 1px #e7eaeb;
+}
+.comment-section .comment .comment-img {
+  width: 75px;
+  height: 75px;
+}
+.comment-section .comment .comment-img img {
+  border-radius: 100px;
+}
+.comment-section .comment .comment-info h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.comment-section .comment .extra {
+  font-size: 11px;
+}
+.comment-section .comment .extra span {
+  color: #a1a4a6;
+  font-weight: 600;
+  margin-right: 15px;
+  position: relative;
+}
+.comment-section .comment .extra span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 2px;
+  height: 1px;
+  background-color: #a1a4a6;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.comment-section .comment .extra a {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3c3c3c;
+}
+.comment-section ul ul {
+  padding-left: 40px;
+}
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem !important;
+}
+@media (min-width: 576px) {
+  .align-items-sm-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+}
+@media (min-width: 576px) {
+  .flex-sm-row {
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+  }
+}
+.justify-content-between {
+  -ms-flex-pack: justify!important;
+  justify-content: space-between!important;
+}
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+.pl-4, .px-4 {
+  padding-left: 1.5rem!important;
+}

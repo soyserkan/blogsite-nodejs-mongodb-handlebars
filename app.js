@@ -59,11 +59,13 @@ const mainRoutes = require('./routes/home/index');
 const adminRoutes = require('./routes/admin/index');
 const postsRoutes = require('./routes/admin/posts');
 const categoriesRoutes = require('./routes/admin/categories');
+const commentsRoutes = require('./routes/admin/comments');
 
 app.use('/', mainRoutes);
 app.use('/admin', adminRoutes);
 app.use('/admin/posts', postsRoutes);
 app.use('/admin/categories', categoriesRoutes);
+app.use('/admin/comments', commentsRoutes);
 
 
 
