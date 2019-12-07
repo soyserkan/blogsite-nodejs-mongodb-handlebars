@@ -122,7 +122,7 @@ router.get('/post-detail/:id', async (req, res) => {
     try {
         const postData = await Post.findOne({
             _id: req.params.id
-        }).populate('category');
+        }).populate({ path: 'comments', populate: { path: 'user', model: 'Users' } }).populate('category user');
         const categoryData = await Category.find({});
         res.render('home/post-detail', { postData, categoryData });
     } catch (error) {

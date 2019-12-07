@@ -1,32 +1,32 @@
 <h1>Tüm Blog Yazıları</h1>
 
-<table class="table table-bordered" >
-<thead>
-    <tr>
-        <th>ID</th>
-        <th>Fotoğraf</th>
-        <th>Başlık</th>
-        <th>Kategori</th>
-        <th>Durum</th>
-        <th>Yorum İzni</th>
-        <th>Tarih</th>
-        <th>İşlem</th>
-    </tr>
-</thead>
-<tbody>
-    {{#each postsData}}
-    <tr>
-        <td>{{id}}</td>
-        <td><img src="/uploads/{{file}}" class="img-responsive" height="50"></td>
-        <td>{{title}}</td>
-        <td>{{category.name}}</td>
-        <td>{{status}}</td>
-        <td>{{allowComments}}</td>
-        <td>{{generateTime date 'MMMM Do YYYY'}}</td>
-        <td><a href="/admin/posts/edit/{{id}}" class="btn btn-info">Düzenle</a>&nbsp;<a href="/admin/posts/delete/{{id}}" class="btn btn-danger">Sil</a></td>
-    </tr>
-    {{/each}}
-</tbody>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fotoğraf</th>
+            <th>Başlık</th>
+            <th>Kategori</th>
+            <th>Durum</th>
+            <th>Yorum İzni</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each postsData}}
+        <tr>
+            <td>{{id}}</td>
+            <td><img src="/uploads/{{file}}" class="img-responsive" height="50"></td>
+            <td>{{title}}</td>
+            <td>{{category.name}}</td>
+            <td>{{status}}</td>
+            <td>{{allowComments}}</td>
+            <td>{{generateTime date 'MMMM Do YYYY'}}</td>
+            <td><a class="btn btn-success" href="/post-detail/{{id}}">Git</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
 
 
 

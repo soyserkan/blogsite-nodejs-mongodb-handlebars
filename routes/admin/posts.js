@@ -20,6 +20,15 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/my-posts', async (req, res) => {
+    try {
+        const postsData = await Post.find({ user: req.user }).populate('category');
+        res.render("admin/posts/my-posts", { postsData });
+    } catch (error) {
+        console.log('Error occured: ', error);
+    }
+});
+
 router.get('/create', async (req, res) => {
     try {
         const categoryData = await Category.find({});
@@ -53,6 +62,7 @@ router.post('/create', async (req, res) => {
 
         const allowComments = (req.body.allowComments == 'on') ? true : false;
         const newPost = new Post({
+            user: req.user.id,
             title: req.body.title,
             status: req.body.status,
             allowComments: allowComments,
@@ -88,6 +98,7 @@ router.put('/edit/:id', async (req, res) => {
     const allowComments = (req.body.allowComments == 'on') ? true : false
     try {
         const updateData = await Post.findOne({ _id: req.params.id });
+        updateData.user = req.user.id;
         updateData.title = req.body.title;
         updateData.status = req.body.status;
         updateData.allowComments = allowComments;
@@ -112,8 +123,13 @@ router.put('/edit/:id', async (req, res) => {
 
 router.get('/delete/:id', async (req, res) => {
     try {
-        const post = await Post.findOne({ _id: req.params.id });
+        const post = await Post.findOne({ _id: req.params.id }).populate('comments');
         fs.unlink(`./public/uploads/${post.file}`, () => {
+            if (!post.comments.length < 1) {
+                post.comments.forEach(commnet => {
+                    commnet.remove();
+                });
+            }
             post.remove();
             req.flash('success_message', 'Blog yazınız başarıyla silindi!');
             res.redirect('/admin/posts');

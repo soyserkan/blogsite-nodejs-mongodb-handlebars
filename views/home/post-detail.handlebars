@@ -26,8 +26,8 @@
 							<div class="post-content">
 								<div class="post-titel-author pt-30 pb-15">
 									<h3><a href="#">{{postData.title}}</a></h3>
-									<span>{{generateTime postData.date 'DD MMMM YYYY, HH:mm'}} / <a href="#">By :
-											Kismot</a></span>
+									<span>{{generateTime postData.date 'DD MMMM YYYY, HH:mm'}} / <a href="#">Yazar :
+											{{postData.user.name}}</a></span>
 								</div>
 								<div class="post-srt-content pb-20 border-bottom">
 									<p>{{postData.body}}</p>
@@ -266,15 +266,42 @@
 					<!-- Titel Here -->
 
 					<!-- Titel Here -->
+					{{#if user}}
+					{{#if postData.allowComments}}
+					<!-- Leave Comment Area Start -->
+					<div class="leave-comment">
+						<form id="contact-form" class="form-group" method="POST" action="/admin/comments">
+							<div class="col-md-12">
+								<div class="form-textarea">
+									<textarea name="body" required id="message" placeholder="Yorumunuzu buraya yazınız"
+										rows="9" class="form-control"></textarea>
+									<input type="hidden" value="{{postData.id}}" name="id">
+								</div>
+								<div class="form-button">
+									<button class="contact-submit" type="submit">Paylaş</button>
+									<p class="form-messege"></p>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					{{/if}}
+					<!-- Leave Comment Area End -->
+
+
+					{{else}}
+					<h5>Yorum yazmak için lütfen giriş yapınız</h5>
+
+					{{/if}}
 
 
 					<div class="comment-section  pt-5 pb-5 pb-md-0">
 						<div class="comment-list">
-							<div class="sec-title">
+							<div class="sec-title" style="padding-top: 220px;">
 								<h3>3 Yorum </h3>
 							</div>
 							<ul class="list-unstyled mb-0">
-								<li>
+								{{!-- <li>
 									<div class="comment d-flex justify-content-between">
 										<div class="comment-img flex-shrink-0">
 											<img src="https://webdevproof.com/theme-forest-demo/nelluce/fashion/img/comment-02.jpg"
@@ -317,51 +344,31 @@
 											</div>
 										</li>
 									</ul>
-								</li>
+								</li> --}}
+								{{#each   postData.comments}}
 								<li>
 									<div class="comment d-flex justify-content-between">
 										<div class="comment-img flex-shrink-0">
 											<img src="https://webdevproof.com/theme-forest-demo/nelluce/fashion/img/comment-02.jpg"
 												alt="" class="img-fluid">
 										</div>
-										<div class="comment-info pl-4">
+										<div class="comment-info pl-4" style="width: 735px;">
 											<div
 												class="header d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-3">
-												<h3>Anniee Marquee</h3>
+												<h3>{{user.name}}  {{user.surname}}</h3>
 												<div class="extra">
-													<span>May 24, 2019</span>
-													<a href="#" class="reply">Reply</a>
+													<span>{{generateTime date 'DD MMMM YYYY'}}</span>
+													<a href="#" class="reply">Cevapla</a>
 												</div>
 											</div>
-											<p class="mb-0">Proin gravida nibh vel velit auctor aliquet. Aenean
-												sollicitudin, lorem quisma bibendum auctor nisi elit consequat ipsum,
-												nec sagittis sem amet nibh.</p>
+											<p class="mb-0">{{body}}</p>
 										</div>
 									</div>
 								</li>
+								{{/each}}
 							</ul>
 						</div>
 					</div>
-					<!-- Leave Comment Area Start -->
-					<div class="leave-comment">
-						<form id="contact-form" class="form-group" method="POST" action="/admin/comments">
-							<div class="col-md-12">
-								<div class="form-textarea">
-									<textarea name="body" required id="message"
-										placeholder="Yorumunuzu buraya yazınız" rows="9"
-										class="form-control"></textarea>
-								</div>
-								<div class="form-button">
-									<button class="contact-submit" type="submit">Paylaş</button>
-									<p class="form-messege"></p>
-								</div>
-							</div>
-						</form>
-					</div>
-					<!-- Leave Comment Area End -->
-
-
-
 
 
 
