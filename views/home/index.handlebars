@@ -55,19 +55,19 @@
 					<div class="col-md-4">
 						<div class="blog-single-post pb-60">
 							<div class="blog-img">
-								<a href="/post-detail/{{_id}}"><img src="../uploads/{{file}}" alt=""
+								<a href="/post-detail/{{slug}}"><img src="../uploads/{{file}}" alt=""
 										style="width: 100%; height:auto;" /></a>
 								<span class="pst-titel"><a href="#">{{category.name}}</a></span>
 							</div>
 							<div class="post-content">
 								<div class="post-titel-author pt-30 pb-15">
-									<h3><a href="/post-detail/{{_id}}">{{limitString title 20}}</a></h3>
+									<h3><a href="/post-detail/{{slug}}">{{limitString title 20}}</a></h3>
 									<span>{{generateTime date 'DD MMMM YYYY, HH:mm'}} / <a href="#">By :
 											Kausar</a></span>
 								</div>
 								<div class="post-srt-content pb-20 border-bottom">
 									<p>{{limitString body 65}}</p>
-									<a href="/post-detail/{{_id}}">DEVAMINI GÖR <i
+									<a href="/post-detail/{{slug}}">DEVAMINI GÖR <i
 											class="icofont icofont-long-arrow-right"></i></a>
 								</div>
 								<div class="post-info pt-15 text-center">
