@@ -69,8 +69,8 @@ app.use('/admin/comments', commentsRoutes);
 
 
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`server listening on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`server listening on port ${port}`);
 });
