@@ -14,11 +14,11 @@ const db = require('./config/database')();
 
 app.use(express.static(`${__dirname}/public`));
 
-const { select, generateTime, limitString } = require('./helpers/handlebars-helpers');
+const { select, generateTime, limitString, paginate } = require('./helpers/handlebars-helpers');
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'home',
-    helpers: { select, generateTime, limitString }
+    helpers: { select, generateTime, limitString, paginate }
 }));
 
 app.set('view engine', 'handlebars');
@@ -69,7 +69,7 @@ app.use('/admin/comments', commentsRoutes);
 
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`server listening on port ${PORT}`);

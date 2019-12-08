@@ -5,6 +5,7 @@
         <tr>
             <th>ID</th>
             <th>Yorum Sahibi</th>
+            <th>Yorumu Onayla</th>
             <th>Zaman</th>
             <th>İşlem</th>
         </tr>
@@ -14,6 +15,8 @@
         <tr>
             <td>{{id}}</td>
             <td>{{user.name}} {{user.surname}}</td>
+            <td><input type="checkbox" data-id="{{id}}" {{#if approveComment}} checked {{/if}} name="approveComment">
+            </td>
             <td>{{generateTime date 'MMMM Do YYYY'}}</td>
             <td><a href="/admin/comments/delete/{{id}}" class="btn btn-danger">Sil</a></td>
         </tr>

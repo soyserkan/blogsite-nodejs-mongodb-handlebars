@@ -73,7 +73,7 @@ router.post('/create', async (req, res) => {
         try {
             const savedData = await newPost.save();
             req.flash('success_message', `${savedData.title} başlıklı blog yazınız başarıyla oluşturuldu!`);
-            res.redirect('/admin/posts');
+            res.redirect('/admin/posts/my-posts');
         } catch (error) {
             console.log('Error occured: ', error);
         }
@@ -115,7 +115,7 @@ router.put('/edit/:id', async (req, res) => {
         };
         await updateData.save();
         req.flash('success_message', 'Blog yazınız başarıyla güncellendi!');
-        res.redirect('/admin/posts');
+        res.redirect('/admin/posts/my-posts');
     } catch (error) {
         console.log('Error occured: ', error);
     }

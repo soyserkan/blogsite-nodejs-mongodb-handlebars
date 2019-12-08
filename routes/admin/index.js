@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const faker = require('faker');
 const Post = require('../../models/Post');
+const Category = require('../../models/Category');
+const Comment = require('../../models/Comment');
 const { userAuthenticated } = require('../../helpers/authentication');
 
 router.all('/*', userAuthenticated, (req, res, next) => {
@@ -10,9 +12,11 @@ router.all('/*', userAuthenticated, (req, res, next) => {
 });
 
 
-router.get('/', (req, res) => {
-
-    res.render('admin/index');
+router.get('/', async (req, res) => {
+    const posts = await Post.countDocuments({});
+    const category = await Category.countDocuments({});
+    const comment = await Comment.countDocuments({});
+    res.render('admin/index', { posts,category,comment });
 });
 router.get('/dashboard', (req, res) => {
     res.render('admin/dashboard');

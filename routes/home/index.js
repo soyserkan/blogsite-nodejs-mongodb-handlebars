@@ -14,11 +14,13 @@ router.all('/*', (req, res, next) => {
 });
 
 router.get('/', async (req, res) => {
-
+    const perPage = 10;
+    const page = req.query.page || 1;
     try {
-        const postData = await Post.find({}).populate('category');
+        const postData = await Post.find({}).populate('category').skip((perPage * page) - perPage).limit(perPage);
+        const postCount = await Post.count({});
         const categoryData = await Category.find({});
-        res.render('home/index', { postData, categoryData });
+        res.render('home/index', { postData, categoryData, current: parseInt(page), pages: Math.ceil(postCount / perPage) });
     } catch (error) {
         console.log(`Error occured: ${error}`);
     }
@@ -118,11 +120,11 @@ router.post('/register', async (req, res) => {
     }
 });
 
-router.get('/post-detail/:id', async (req, res) => {
+router.get('/post-detail/:slug', async (req, res) => {
     try {
         const postData = await Post.findOne({
-            _id: req.params.id
-        }).populate({ path: 'comments', populate: { path: 'user', model: 'Users' } }).populate('category user');
+            slug: req.params.slug
+        }).populate({ path: 'comments', match: { approveComment: true }, populate: { path: 'user', model: 'Users' } }).populate('category user');
         const categoryData = await Category.find({});
         res.render('home/post-detail', { postData, categoryData });
     } catch (error) {

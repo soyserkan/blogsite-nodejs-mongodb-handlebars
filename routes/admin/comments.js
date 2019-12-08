@@ -25,6 +25,7 @@ router.post('/', async (req, res) => {
         await post.comments.push(newComment);
         await post.save();
         await newComment.save();
+        req.flash('success_message', 'Yorumunuz kısa süren bir değerlendirmenin ardından gösterilecektir');
         res.redirect(`/post-detail/${post.id}`);
     } catch (error) {
         console.log('Error: ', error);
@@ -43,6 +44,18 @@ router.get('/delete/:id', async (req, res) => {
         console.log('Error occured: ', error);
     }
 });
+
+
+router.post('/approve-comments', async (req, res) => {
+    try {
+        const data = await Comment.findByIdAndUpdate(req.body.id, { $set: { approveComment: req.body.approveComment } }, { useFindAndModify: false });
+        res.send(data);
+    } catch (error) {
+        console.log('Error occured: ', error);
+    }
+
+})
+
 
 
 module.exports = router;
