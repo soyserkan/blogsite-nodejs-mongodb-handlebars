@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     const posts = await Post.countDocuments({});
     const category = await Category.countDocuments({});
     const comment = await Comment.countDocuments({});
-    res.render('admin/index', { posts,category,comment });
+    res.render('admin/index', { posts, category, comment });
 });
 router.get('/dashboard', (req, res) => {
     res.render('admin/dashboard');
@@ -26,8 +26,10 @@ router.post('/generate-fake-posts', async (req, res) => {
 
     for (let i = 0; i < req.body.amount; i++) {
         let post = new Post();
+        post.user = req.user.id;
         post.title = faker.lorem.words();
         post.status = 'public';
+        post.category = "5deea2098903e903bc63451f";
         post.allowComments = faker.random.boolean();
         post.body = faker.lorem.sentences();
         post.file = faker.image.imageUrl();

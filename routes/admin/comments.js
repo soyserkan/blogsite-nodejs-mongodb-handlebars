@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         await post.save();
         await newComment.save();
         req.flash('success_message', 'Yorumunuz kısa süren bir değerlendirmenin ardından gösterilecektir');
-        res.redirect(`/post-detail/${post.id}`);
+        res.redirect(`/post-detail/${post.slug}`);
     } catch (error) {
         console.log('Error: ', error);
     }

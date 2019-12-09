@@ -1,4 +1,4 @@
-<section class="header-banner-area pt-130 pb-115 bg-2">
+{{!-- <section class="">
 	<div class="container">
 		<div class="row">
 			<div class="header-banner-titel text-uppercase text-black text-center">
@@ -6,10 +6,10 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
 <!-- Header Banner Area Start -->
 <!-- Page Content Start -->
-<section class="page-content-area ptb-120">
+<section class="page-content-area ptb-120" style="margin-top: -100px;">
 	<div class="container">
 		<div class="row">
 			<!-- Content Left Area -->
@@ -18,18 +18,19 @@
 					<!-- Blog Large Image Single Item -->
 					<div class="col-md-12">
 						<div class="blog-single-post pb-60">
+							<div class="post-titel-author  pt-30 pb-15">
+								<h1 style="margin:20px 0px 20px 0px;"><a href="#">{{postData.title}}</a></h1>
+								<span>{{generateTime postData.date 'DD MMMM YYYY, HH:mm'}} / <a href="#">Yazar :
+										{{postData.user.name}}</a></span>
+							</div>
 							<div class="blog-img">
 								<a href="#"><img src="../uploads/{{postData.file}}" alt=""
 										style="width: 100%; height:auto;" /></a>
 								<span class="pst-titel"><a href="#">{{postData.category.name}}</a></span>
 							</div>
 							<div class="post-content">
-								<div class="post-titel-author pt-30 pb-15">
-									<h3><a href="#">{{postData.title}}</a></h3>
-									<span>{{generateTime postData.date 'DD MMMM YYYY, HH:mm'}} / <a href="#">Yazar :
-											{{postData.user.name}}</a></span>
-								</div>
-								<div class="post-srt-content pb-20 border-bottom">
+
+								<div class="post-srt-content pb-20 border-bottom" style="margin-top: 30px;">
 									<p>{{postData.body}}</p>
 								</div>
 								<div class="post-info pt-15">
@@ -266,39 +267,14 @@
 					<!-- Titel Here -->
 
 					<!-- Titel Here -->
-					{{#if user}}
-					{{#if postData.allowComments}}
-					<!-- Leave Comment Area Start -->
-					<div class="leave-comment">
-						<form id="contact-form" class="form-group" method="POST" action="/admin/comments">
-							<div class="col-md-12">
-								<div class="form-textarea">
-									<textarea name="body" required id="message" placeholder="Yorumunuzu buraya yazınız"
-										rows="9" class="form-control"></textarea>
-									<input type="hidden" value="{{postData.id}}" name="id">
-								</div>
-								<div class="form-button">
-									<button class="contact-submit" type="submit">Paylaş</button>
-									<p class="form-messege"></p>
-								</div>
-							</div>
-						</form>
-					</div>
 
-					{{/if}}
-					<!-- Leave Comment Area End -->
-
-
-					{{else}}
-					<h5>Yorum yazmak için lütfen giriş yapınız</h5>
-
-					{{/if}}
 
 
 					<div class="comment-section  pt-5 pb-5 pb-md-0">
 						<div class="comment-list">
-							<div class="sec-title" style="padding-top: 220px;">
-								<h3>3 Yorum </h3>
+							
+							<div class="sec-title">
+								<h3>{{totalCount.total}} Yorum </h3>
 							</div>
 							<ul class="list-unstyled mb-0">
 								{{!-- <li>
@@ -349,13 +325,13 @@
 								<li>
 									<div class="comment d-flex justify-content-between">
 										<div class="comment-img flex-shrink-0">
-											<img src="https://webdevproof.com/theme-forest-demo/nelluce/fashion/img/comment-02.jpg"
+											<img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Users-User-Male-2-icon.png"
 												alt="" class="img-fluid">
 										</div>
 										<div class="comment-info pl-4" style="width: 735px;">
 											<div
 												class="header d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-3">
-												<h3>{{user.name}}  {{user.surname}}</h3>
+												<h3>{{user.name}} {{user.surname}}</h3>
 												<div class="extra">
 													<span>{{generateTime date 'DD MMMM YYYY'}}</span>
 													<a href="#" class="reply">Cevapla</a>
@@ -370,9 +346,31 @@
 						</div>
 					</div>
 
+					{{#if user}}
+					{{#if postData.allowComments}}
+					<!-- Leave Comment Area Start -->
+					<div class="leave-comment" style="margin-left: -15px;">
+						<form id="contact-form" class="form-group" method="POST" action="/admin/comments">
+							<div class="col-md-12">
+								<div class="form-textarea">
+									<textarea name="body" required id="message" placeholder="Yorumunuzu buraya yazınız"
+										rows="9" class="form-control"></textarea>
+									<input type="hidden" value="{{postData.id}}" name="id">
+								</div>
+								<div class="form-button">
+									<button class="contact-submit" type="submit">Paylaş</button>
+									<p class="form-messege"></p>
+								</div>
+							</div>
+						</form>
+					</div>
 
+					{{/if}}
+					<!-- Leave Comment Area End -->
+					{{else}}
+					<h5>Yorum yazmak için lütfen giriş yapınız</h5>
 
-
+					{{/if}}
 				</div>
 			</div>
 			<!-- Content Left Area -->

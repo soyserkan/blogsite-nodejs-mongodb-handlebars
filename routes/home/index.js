@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../../models/Post');
 const Category = require('../../models/Category');
+const Comment = require('../../models/Comment');
 const User = require('../../models/User');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
@@ -17,7 +18,7 @@ router.get('/', async (req, res) => {
     const perPage = 10;
     const page = req.query.page || 1;
     try {
-        const postData = await Post.find({}).populate('category').skip((perPage * page) - perPage).limit(perPage);
+        const postData = await Post.find({}).populate('category user').skip((perPage * page) - perPage).limit(perPage);
         const postCount = await Post.count({});
         const categoryData = await Category.find({});
         res.render('home/index', { postData, categoryData, current: parseInt(page), pages: Math.ceil(postCount / perPage) });
@@ -126,7 +127,22 @@ router.get('/post-detail/:slug', async (req, res) => {
             slug: req.params.slug
         }).populate({ path: 'comments', match: { approveComment: true }, populate: { path: 'user', model: 'Users' } }).populate('category user');
         const categoryData = await Category.find({});
-        res.render('home/post-detail', { postData, categoryData });
+        const comment = await Post.aggregate(
+            [
+              {
+                $match: { slug: req.params.slug }
+              },
+              {
+                $group: {
+                  _id: "$title",
+                  total: { $sum: { $size: "$comments"} }
+                }
+              }
+            ]
+          )
+          var totalCount = comment.find(x => x.total);
+          
+        res.render('home/post-detail', { postData, categoryData, totalCount });
     } catch (error) {
         console.log(`Error occured: ${error}`);
     }
