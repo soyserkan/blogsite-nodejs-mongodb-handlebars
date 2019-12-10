@@ -29,7 +29,7 @@
 			<div class="pos-slideshow-info pos-slideshow-info2">
 				<div class="container">
 					<div class="pos_description hidden-xs">
-						<div class="title2"><span class="txt">DOĞA, DÜNYADA GÜZELDİR</span></div>
+						<div class="title2"><span class="txt">DÜNYA AYAKLARIMIN ALTINDA</span></div>
 						<div class="title1"><span class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 								sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
 								min</span></div>
@@ -52,11 +52,11 @@
 			<div class="col-md-9">
 				<div class="row">
 					{{#each postData}}
-					<div class="col-md-4">
-						<div class="blog-single-post pb-60">
+					<div class="col-md-4" >
+						<div class="blog-single-post pb-60"  >
 							<div class="blog-img">
 								<a href="/post-detail/{{slug}}"><img src="../uploads/{{file}}" alt=""
-										style=" height:180px;" /></a>
+										style="width:100%;height:250px " /></a>
 								<span class="pst-titel"><a href="#">{{category.name}}</a></span>
 							</div>
 							<div class="post-content">
@@ -87,8 +87,8 @@
 					<!-- Pager Previous Next Button -->
 
 				
-					 <div class="col-md-12">
-									<ul class="pager">
+					 <div class="col-md-12 text-center">
+									<ul class="pagination">
 											{{#paginate current=current pages=pages}} {{/paginate}}
 										{{!-- <li><a href="#"><i class="fa fa-angle-double-left"></i>ÖNCEKİ</a></li>
 										<li><a href="#">SONRAKİ<i class="fa fa-angle-double-right"></i></a></li> --}}
