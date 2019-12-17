@@ -55,13 +55,22 @@
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
 
-            Hoşgeldin, {{#if user}}{{user.name}}{{/if}}
-          </a>
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Çıkış Yap
-          </a>
+          <div class="row">
+            <div class="col-md">
+              <h6 style="color: rgba(255,255,255,.5);width: max-content;margin-top: 10px;">Merhaba,
+                {{#if user}}{{user.name}}{{/if}}</h6>
+            </div>
+
+            <div class="col-md">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                <i class="fa fa-fw fa-sign-out"></i>Çıkış Yap
+              </a>
+            </div>
+          </div>
+
+
+
         </li>
       </ul>
     </div>
@@ -98,15 +107,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Çıkış Yapıyorsunuz</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Sistemden ayrılıyorsunuz. Çıkış yapmak istediğinize emin misiniz?</div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/logout">Logout</a>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+            <a class="btn btn-primary" href="/logout">Çıkış Yap</a>
           </div>
         </div>
       </div>
